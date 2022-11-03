@@ -1,13 +1,2 @@
-before(:each) do #given0
-  @gift_card = GiftCard.new(20)
-  @result = @gift_card.?withdraw?(15)
-end
-it 'returns truthy value' do
-  expect(@result).to ?be_truthy?
-end
-it 'changes the balance' do
-  expect(@gift_card.?balance?).to eq(5)
-end
-it 'does not result in error message' do
-  expect(@gift_card.?error?).to be_empty
-end
+{"pre": "describe GiftCard do\n  describe 'creating' do\n    it 'fails with negative balance' do\n      expect { GiftCard.new(-1) }.to raise_error(ArgumentError)\n    end\n    it 'succeeds with positive balance' do\n      gift_card = GiftCard.new(20)\n      expect(gift_card.balance).to eq(20)\n    end\n  end\n  describe 'withdrawing with sufficient balance' do\n", "lines": "before(:each) do #given0\n  @gift_card = GiftCard.new(20)\n  @result = @gift_card.?withdraw?(15)\nend\nit 'returns truthy value' do\n  expect(@result).to ?be_truthy?\nend\nit 'changes the balance' do\n  expect(@gift_card.?balance?).to eq(5)\nend\nit 'does not result in error message' do\n  expect(@gift_card.?error?).to be_empty\nend\n", "post": "  end\nend\n"}
+

@@ -2,8 +2,8 @@
 Customers can use the app to place orders using their card
 balance. <br /><br />
 
-We have classes that model the GiftCard and the Customer.  First you
-will write tests for the GiftCard class, to verify that: <br /><br />
+We have classes that model the GiftCard and the Customer.  You have now
+written tests for the GiftCard class to verify that: <br /><br />
 
 * a GiftCard when first created has a non-negative cash balance <br />
 * a withdrawal when there is enough cash returns success, and changes
@@ -12,6 +12,9 @@ the card balance <br />
 an error message explaining the failure, and does not change the card balance. <br /><br />
 
 Now, we would like to DRY out our code by using the `before(:each)` block. <br />
+
+Arrange the common lines of the previous tests into the `before` block with the
+unique lines in their own `it` blocks.
 """
 
 
