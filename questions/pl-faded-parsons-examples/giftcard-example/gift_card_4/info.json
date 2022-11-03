@@ -1,0 +1,14 @@
+{
+    "uuid": "ec3eae22-59bc-45ee-ba71-2ccc65272a2e",
+    "title": "",
+    "topic": "",
+    "tags": [],
+    "type": "v3",
+    "gradingMethod" : "External",
+    "externalGradingOptions": {
+        "enabled": true,
+        "image" : "nalsoon/rspec-autograder",
+        "entrypoint": "/grader/run.py",
+        "timeout" : 60
+    }
+}

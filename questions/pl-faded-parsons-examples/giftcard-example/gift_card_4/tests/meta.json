@@ -1,0 +1,1 @@
+{"submission_file": "spec/customer_spec.rb", "submission_root": "", "pre-text": "describe Customer do\n  it 'buys the item if balance covers payment' do\n", "post-text": "  end\nend\n"}
