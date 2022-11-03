@@ -38,14 +38,14 @@ prompt: |
   building a single test case in which we construct a test double for
   a gift card.  The double is an object that has no built-in behaviors,
   so it must be given just enough behavior to be useful
-  for this test case: we use `allow` to say "If the double gets a call
-  to `withdraw`, it should just return true".  Similarly, if `#pay` is
+  for this test case: we use allow to say "If the double gets a call
+  to withdraw, it should just return true".  Similarly, if #pay is
   working correctly, the result of a successful withdrawal should be a
-  call to `Customer#notify` with a happy message.  Note that in this
-  case, `Customer#notify` _hasn't even been implemented_!  By saying
+  call to Customer#notify with a happy message.  Note that in this
+  case, Customer#notify hasn't even been implemented!  By saying
   that we expect to receive a call to it with a particular argument, we
   basically "short-circuit" the real method call.  This further isolates
-  our test case from other methods, even those in `Customer` itself. <br /><br />
+  our test case from other methods, even those in Customer itself. <br /><br />
   
 solution: 
   pre: |
