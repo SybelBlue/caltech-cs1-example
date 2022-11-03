@@ -5,14 +5,37 @@ prompt: |
   balance. <br /><br />
 
   We have classes that model the GiftCard and the Customer.  First you
-  will write tests for the GiftCard class, to verify that: <br /><br />
+  wrote tests for the creation of a new GiftCard. Now you will add tests
+  for the withdraw method shown below to verify that: <br /><br />
 
-  * a GiftCard when first created has a non-negative cash balance <br />
   * a withdrawal when there is enough cash returns success, and changes
   the card balance <br />
   * a withdrawal when there is not enough cash returns failure, provides 
   an error message explaining the failure, and does not change the card balance. <br /><br />
   
+  System Under Test:
+  <pl-code language="ruby">
+  <![CDATA[
+    class GiftCard
+      attr_reader :balance, :error
+      def initialize(balance)
+        if @balance < 0
+          raise ArgumentError.new("New gift card cannot have negative balance")
+        end
+        @balance = balance
+        @error = nil
+      end
+      def withdraw(amount)
+        if @balance >= amount
+          @balance -= amount
+        else
+          @error = "Insufficient balance"
+        end
+      end
+    end
+  ]]>
+  </pl-code>
+
   The provided code before the submission box is semantically equivalent to the 
   code you wrote previously, but take note that we have chosen to separate it 
   logically by putting it into a `describe` block.
