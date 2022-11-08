@@ -13,7 +13,6 @@ an error message explaining the failure, and does not change the card balance. <
 
 System Under Test:
 <pl-code language="ruby">
-<![CDATA[
   class GiftCard
     attr_reader :balance, :error
     def initialize(balance)
@@ -31,7 +30,6 @@ System Under Test:
       end
     end
   end
-]]>
 </pl-code>
 
 The provided code before the submission box is semantically equivalent to the 

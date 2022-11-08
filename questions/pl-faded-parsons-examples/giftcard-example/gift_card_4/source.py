@@ -3,7 +3,6 @@ subject of the next set of tests that you will construct.<br /><br />
 
 System Under Test:
 <pl-code language="ruby">
-<![CDATA[
   class Customer
     attr_accessor :name, :gift_card
     def initialize(name, gift_card=nil)
@@ -18,7 +17,6 @@ System Under Test:
       end
     end
   end
-]]>
 </pl-code>
 
 The new challenge in testing
@@ -47,6 +45,6 @@ our test case from other methods, even those in <code>Customer</code> itself. <b
 """
 
 
-{"pre": "describe Customer do\n  it 'buys the item if balance covers payment' do\n", "lines": "@loaded_gift_card = double('gift_card') #0given\nallow(@loaded_gift_card).to receive(?:withdraw?).and_return(true)\n@customer = ?Customer?.new('Student', @fake_gift_card)\nexpect(?@customer?).to receive(?:notify?).with(\"payment successful\")\n@customer.?pay?(10)\n", "post": "  end\nend\n"}
+{"pre": "describe Customer do\n  it 'buys the item if balance covers payment' do\n", "lines": "@loaded_gift_card = double('gift_card') #0given\nallow(@loaded_gift_card).to receive(:?withdraw?).and_return(true)\n@customer = ?Customer?.new('Student', @fake_gift_card)\nexpect(?@customer?).to receive(:?notify?).with(\"payment successful\")\n@customer.?pay?(10)\n", "post": "  end\nend\n"}
 
 

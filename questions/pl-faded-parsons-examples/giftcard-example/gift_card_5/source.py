@@ -9,7 +9,6 @@ before-block in a <code>describe</code>.<br /><br />
 
 System Under Test:
 <pl-code language="ruby">
-<![CDATA[
   class Customer
     attr_accessor :name, :gift_card
     def initialize(name, gift_card=nil)
@@ -24,11 +23,10 @@ System Under Test:
       end
     end
   end
-]]>
 </pl-code>
 """
 
 
-{"pre": "describe Customer do\n  describe 'trying to buy' do\n", "lines": "before(?:each?) do #0given\n  @loaded_gift_card = ?double?('gift_card')\n  @customer = Customer.new('Student', @fake_gift_card)\nend\nit 'succeeds if balance covers payment' do\n  ?allow?(@loaded_gift_card).to receive(:withdraw).and_return(?true?)\n  expect(@customer).to receive(:notify).with(\"payment successful\")\n  @customer.?pay?(10)\nend\nit 'fails if balance does not cover payment' do\n  allow(@loaded_gift_card).to receive(?:withdraw?).and_return(nil)\n  expect(@customer).to receive(?:notify?).with(\"purchase cannot be completed\")\n  @customer.?pay?(10)\nend\n", "post": "  end\nend\n"}
+{"pre": "describe Customer do\n  describe 'trying to buy' do\n", "lines": "before(:?each?) do #0given\n  @loaded_gift_card = ?double?('gift_card')\n  @customer = Customer.new('Student', @fake_gift_card)\nend\nit 'succeeds if balance covers payment' do\n  ?allow?(@loaded_gift_card).to receive(:withdraw).and_return(?true?)\n  expect(@customer).to receive(:notify).with(\"payment successful\")\n  @customer.?pay?(10)\nend\nit 'fails if balance does not cover payment' do\n  allow(@loaded_gift_card).to receive(:?withdraw?).and_return(nil)\n  expect(@customer).to receive(:?notify?).with(\"purchase cannot be completed\")\n  @customer.?pay?(10)\nend\n", "post": "  end\nend\n"}
 
 

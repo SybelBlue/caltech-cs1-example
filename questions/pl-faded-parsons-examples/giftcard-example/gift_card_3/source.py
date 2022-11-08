@@ -14,7 +14,8 @@ an error message explaining the failure, and does not change the card balance. <
 Now, we would like to DRY out our code by using the `before(:each)` block. <br />
 
 Arrange the common lines of the previous tests into the `before` block with the
-unique lines in their own `it` blocks.
+unique lines in their own `it` blocks. The SUT is hidden for this rspec refactoring
+exercise.
 """
 
 

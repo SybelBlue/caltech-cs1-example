@@ -7,11 +7,10 @@ will write tests for the GiftCard class, to verify that: <br /><br />
 
 * a GiftCard when first created has a non-negative cash balance <br />
 * a GiftCard created with a positive amount sets balance accordingly <br />
-* a GiftCard created with a negative amount raises an ArgumentError <br />
+* a GiftCard created with a negative amount raises an ArgumentError <br /><br />
 
 System Under Test:
 <pl-code language="ruby">
-<![CDATA[
   class GiftCard
     attr_reader :balance, :error
     def initialize(balance)
@@ -22,7 +21,6 @@ System Under Test:
       @error = nil
     end
   end
-]]>
 </pl-code>
 """
 
