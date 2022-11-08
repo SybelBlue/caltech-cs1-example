@@ -1,0 +1,22 @@
+{
+    "uuid": "e8705d1e-60a1-4d83-b728-d147d08da2a4",
+    "type": "Homework",
+    "title": "giftcard",
+    "set": "Homework",
+    "number": "1",
+    "allowAccess": [
+        {
+            "startDate": "2000-01-01T12:00:00"
+        }    
+    ],
+    "zones": [
+        {
+            "title": "Full sequence",
+            "comment": "These is the full sequence of 5 phases of giftcard test writing questions",
+            "questions": [
+                {"id": "pl-faded-parsons-examples/giftcard-example/gift_card_1", "points": 7, "autoPoints": 7, "advanceScorePerc": 100},
+                {"id": "pl-faded-parsons-examples/giftcard-example/gift_card_3", "points": 13, "autoPoints": 13, "advanceScorePerc": 100}
+            ]
+        }
+    ]
+}
