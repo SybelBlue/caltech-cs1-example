@@ -1,9 +1,10 @@
 {
-    "uuid": "8ce9f55a-38ab-4511-a591-d755e6550ba9",
-    "title": "giftc5",
+    "uuid": "62b466bf-5fa4-4aa8-a29e-89a2f3e84409",
+    "title": "",
     "topic": "",
     "tags": [],
     "type": "v3",
+    "singleVariant": true,
     "gradingMethod" : "External",
     "externalGradingOptions": {
         "enabled": true,

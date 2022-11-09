@@ -11,16 +11,16 @@ will write tests for the GiftCard class, to verify that: <br /><br />
 
 System Under Test:
 <pl-code language="ruby">
-  class GiftCard
-    attr_reader :balance, :error
-    def initialize(balance)
-      if @balance < 0
-        raise ArgumentError.new("New gift card cannot have negative balance")
-      end
-      @balance = balance
-      @error = nil
+class GiftCard
+  attr_reader :balance, :error
+  def initialize(balance)
+    if balance < 0
+      raise ArgumentError.new("New gift card cannot have negative balance")
     end
+    @balance = balance
+    @error = nil
   end
+end
 </pl-code>
 """
 

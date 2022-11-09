@@ -16,7 +16,7 @@ prompt: |
   class GiftCard
     attr_reader :balance, :error
     def initialize(balance)
-      if @balance < 0
+      if balance < 0
         raise ArgumentError.new("New gift card cannot have negative balance")
       end
       @balance = balance
@@ -42,9 +42,9 @@ mutations:
   var_1:
     giftcard.rb: |
       4c4
-      <     if @balance < 0
+      <     if balance < 0
       ---
-      >     if @balance >= 0
+      >     if balance >= 0
   var_2:
     giftcard.rb: |
       7c7
