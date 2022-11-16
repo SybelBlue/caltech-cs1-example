@@ -1,4 +1,4 @@
-submit_to: spec/gift_card_spec.rb
+submit_to: spec/giftcard_spec.rb
 prompt: |
   Your app manages online gift cards for a soon-to-be-major e-tailer.
   Customers can use the app to place orders using their card
@@ -8,22 +8,10 @@ prompt: |
   will write tests for the GiftCard class, to verify that: <br /><br />
 
   * a GiftCard when first created has a non-negative cash balance <br />
-  * a GiftCard created with a positive amount sets balance accordingly <br />
-  * a GiftCard created with a negative amount raises an ArgumentError <br /><br />
-
-  System Under Test:
-  <pl-code language="ruby">
-  class GiftCard
-    attr_reader :balance, :error
-    def initialize(balance)
-      if balance < 0
-        raise ArgumentError.new("New gift card cannot have negative balance")
-      end
-      @balance = balance
-      @error = nil
-    end
-  end
-  </pl-code>
+  * a withdrawal when there is enough cash returns success, and changes 
+  the card balance <br />
+  * a withdrawal when there is not enough cash returns failure, provides 
+  an error message explaining the failure, and does not change the card balance. <br />
   
 solution:
   pre: |
@@ -39,21 +27,26 @@ solution:
   post: |
     end
 mutations:
-  var_1:
-    giftcard.rb: |
-      4c4
-      <     if balance < 0
-      ---
-      >     if balance >= 0
-  var_2:
-    giftcard.rb: |
-      7c7
-      <     @balance = balance
-      ---
-      >     @balance = -balance
-  var_3:
-    giftcard.rb: |
-      8c8
-      <     @error = nil
-      ---
-      >     @error = 'not nil'
+  wrong_withdraw_check:
+    exclude: 
+      - "GiftCard succeeds with positive balance"
+    files:
+      giftcard.rb: |
+        4c4
+        <     if balance < 0
+        ---
+        >     if balance >= 0
+  initialize_balance_incorrectly:
+    files:
+      giftcard.rb: |
+        7c7
+        <     @balance = balance
+        ---
+        >     @balance = -balance
+  non_nil_error_initialization:
+    files:
+      giftcard.rb: |
+        8c8
+        <     @error = nil
+        ---
+        >     @error = 'not nil'

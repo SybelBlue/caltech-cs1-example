@@ -5,35 +5,14 @@ prompt: |
   balance. <br /><br />
 
   We have classes that model the GiftCard and the Customer.  First you
-  wrote tests for the creation of a new GiftCard. Now you will add tests
-  for the withdraw method shown below to verify that: <br /><br />
+  will write tests for the GiftCard class, to verify that: <br /><br />
 
+  * a GiftCard when first created has a non-negative cash balance <br />
   * a withdrawal when there is enough cash returns success, and changes
   the card balance <br />
   * a withdrawal when there is not enough cash returns failure, provides 
   an error message explaining the failure, and does not change the card balance. <br /><br />
   
-  System Under Test:
-  <pl-code language="ruby">
-  class GiftCard
-    attr_reader :balance, :error
-    def initialize(balance)
-      if balance < 0
-        raise ArgumentError.new("New gift card cannot have negative balance")
-      end
-      @balance = balance
-      @error = nil
-    end
-    def withdraw(amount)
-      if @balance >= amount
-        @balance -= amount
-      else
-        @error = "Insufficient balance"
-      end
-    end
-  end
-  </pl-code>
-
   The provided code before the submission box is semantically equivalent to the 
   code you wrote previously, but take note that we have chosen to separate it 
   logically by putting it into a `describe` block.
@@ -71,21 +50,26 @@ solution:
       end
     end
 mutations:
-  var_1:
-    giftcard.rb: |
-      11c11
-      <     if @balance >= amount
-      ---
-      >     if @balance < amount
-  var_2:
-    giftcard.rb: |
-      12c12
-      <       @balance -= amount
-      ---
-      >       @balance += amount
-  var_3:
-    giftcard.rb: |
-      12c12
-      <       @balance -= amount
-      ---
-      >       @error = 'not empty'
+  wrong_withdraw_check:
+    files:
+      giftcard.rb: |
+        11c11
+        <     if @balance >= amount
+        ---
+        >     if @balance < amount
+  incorrectly_update_balance:
+    exclude:
+      - "GiftCard withdrawing with sufficient balance does not result in error message"
+    files:
+      giftcard.rb: |
+        12c12
+        <       @balance -= amount
+        ---
+        >       @balance += amount
+  error_instead_of_deduct:
+    files:
+      giftcard.rb: |
+        12c12
+        <       @balance -= amount
+        ---
+        >       @error = 'not empty'
