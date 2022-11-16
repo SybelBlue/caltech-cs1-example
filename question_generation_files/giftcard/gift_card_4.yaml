@@ -60,20 +60,23 @@ solution:
     end
 mutations:
   var_1:
-    customer.rb: |
-      8c8
-      <     if gift_card.withdraw(amount)
-      ---
-      >     if gift_card.dont_call_withdraw(amount)
+    files:
+      customer.rb: |
+        8c8
+        <     if gift_card.withdraw(amount)
+        ---
+        >     if gift_card.dont_call_withdraw(amount)
   var_2:
-    customer.rb: |
-      9c9
-      <       self.notify("payment successful")
-      ---
-      >       self.dont_call_notify("payment successful")
+    files:
+      customer.rb: |
+        9c9
+        <       self.notify("payment successful")
+        ---
+        >       self.dont_call_notify("payment successful")
   var_3:
-    customer.rb: |
-      9c9
-      <       self.notify("purchase cannot be completed")
-      ---
-      >       self.dont_call_notify("purchase cannot be completed")
+    files:
+      customer.rb: |
+        9c9
+        <       self.notify("purchase cannot be completed")
+        ---
+        >       self.dont_call_notify("purchase cannot be completed")
