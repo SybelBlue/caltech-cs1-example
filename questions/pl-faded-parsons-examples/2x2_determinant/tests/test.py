@@ -11,7 +11,7 @@ class Test(PLTestCase):
     @name("test 0")
     def test_0(self):
         points = 0
-        # ex: calling a student defined function det 
+        # ex: calling a student defined function det
         #     with args=(1, 2, 3, 4)
         # case = [1, 2, 3, 4]
         # user_val = Feedback.call_user(self.st.det, *case)
@@ -23,5 +23,5 @@ class Test(PLTestCase):
         # ex: test correctness, update points
         # if Feedback.check_scalar('case: ' + case, ref_val, user_val):
         #     points += 1
-        
+
         Feedback.set_score(points)
