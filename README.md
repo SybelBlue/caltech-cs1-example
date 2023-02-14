@@ -1,8 +1,26 @@
-# A tip for putting code into pl-code elements
+# PrairieLearn Faded Parsons Research Repository for UC Berkeley
+
+## Cloning Properly
+
+This repository uses submodules, so a special command is required to fully clone.
+``` sh
+git clone --recurse-submodules https://github.com/ace-lab/pl-ucb-faded-parsons-research.git
+```
+
+If you did not add the --recurse-submodules flag, **we recommend you delete and re-clone.**
+
+## Updating the Faded Parsons Element Submodule
+
+To pull the latest version of the Faded Parsons element, use:
+``` sh
+git submodule update --remote ./elements/pl-faded-parsons/
+```
+
+## A tip for putting code into pl-code elements
 
 Try the following in either qustion.html or the yaml file:
 
-```
+``` xml
 <pl-code language="ruby">
 <![CDATA[
   if something < other || thing > 0
@@ -15,27 +33,27 @@ Try the following in either qustion.html or the yaml file:
 
 
 
-# Starting PL with autograder support
+## Starting PL with autograder support
 
 The easiest way to setup a working environment across all platforms is using [Docker Compose](https://docs.docker.com/compose/). If you've used docker in the past you most likely need no further set-up. You can start PrairieLearn by running:
-```
+``` sh
 docker compose up
-``` 
+```
 
-If you've not set up docker before or the above command is not found, follow the [install instructions](https://docs.docker.com/compose/install/) before starting the PrairieLearn instance. 
+If you've not set up docker before or the above command is not found, follow the [install instructions](https://docs.docker.com/compose/install/) before starting the PrairieLearn instance.
 
 <details>
 <summary>Advanced docker instructions</summary>
 <p>
 <p>
-It's highly recommended to use Docker Compose to start PrairieLearn as it works on Windows(powershell, wsl & git-bash), MacOS and Linux.
-If you prefer to not use Docker Compose, you can use these platform specific docker instructions. You'll still need to have [Docker](https://docs.docker.com/get-docker/) installed. 
- 
-
-### For MacOS and Linux:
+It's highly recommended to use Docker Compose to start PrairieLearn as it works on Windows(powershell, wsl & git-bash), macOS and Linux.
+If you prefer to not use Docker Compose, you can use these platform specific docker instructions. You'll still need to have [Docker](https://docs.docker.com/get-docker/) installed.
 
 
-```
+### For macOS and Linux
+
+
+``` sh
 docker run -it --rm \
     -p 3000:3000 \
     -v "/tmp/directory/for/autograder/jobqueue":"/jobs" \
@@ -46,9 +64,9 @@ docker run -it --rm \
 ```
 
 
-### For Windows in a WSL2 Enviornment:
+### For Windows in a WSL2 Enviornment
 
-```
+``` sh
 docker run -it --rm \
     -p 3000:3000 \
     -v "/tmp/directory/for/autograder/jobqueue":"/jobs" \
@@ -60,15 +78,15 @@ docker run -it --rm \
 ```
 
 
-Note: This only works in a WSL2 environment, as docker in powershell has it's quirks. You can find more information about it in the 	[PrairieLearn docs](https://prairielearn.readthedocs.io/en/latest/externalGrading/#windows-errors-and-quirks).
+Note: This only works in a WSL2 environment, as docker in powershell has it's quirks. You can find more information about it in the [PrairieLearn docs](https://prairielearn.readthedocs.io/en/latest/externalGrading/#windows-errors-and-quirks).
 </details>
 
 
-# Thoughts on gradient of test writing
+## Thoughts on gradient of test writing
 
-## Testing a pure leaf function (single expectation per spec)
+### Testing a pure leaf function (single expectation per spec)
 
-`expect(expr).to `_matcher_  (or `not_to` _matcher_):
+`expect(expr).to` _matcher_  (or `not_to` _matcher_):
 * `eq`
 * `be >`, `be <`, etc
 * `be_truthy` (or falsy)
@@ -77,39 +95,39 @@ Strings: Exercise matchers for `match(/regex/)`, `start_with(string)` (or
 `end_with`)
 
 Collections: `expect(collection).to` :
-*  `be_empty`
+* `be_empty`
 * `include(elt)`
 * `match_array(['order','doesnt','matter'])`
 * `have_key(key)` (for hashes)
 
-## Testing a function that calls a helper
+### Testing a function that calls a helper
 
-`allow(:object).to ` (or `expect(:object).to`):
+`allow(:object).to` (or `expect(:object).to`):
 * `receive(:method_call)`
 * `receive(:method_call).and_return(expr)`
 
-## Multiple specs that share a before-block
+### Multiple specs that share a before-block
 
-## Testing a side effect
+### Testing a side effect
 
-`expect { operation }.to `:
+`expect { operation }.to`:
 * `change { expr }`
 * `change { expr }.by(qty)`
 * `change { expr }.from(val).to(val)`
 * `raise_error(SomeError)`
 
-## Doubles using instance_double (makes sure instance calls its private method the right way)
+### Doubles using instance_double (makes sure instance calls its private method the right way)
 
 
-# Micropilot structure and thoughts
+## Micropilot structure and thoughts
 
 - Read/view lecture/notes
 - pre-test (AF can come up with some of this)
 - finger exercises (see below)
 - exercise sequence (see below)
-- post-test 
+- post-test
 
-## Finger exercises
+### Finger exercises
 
 In Armando's ideal world, BEFORE doing the exercise sequence below,
 there would be numerous "finger exercises" to practice writing very
@@ -117,9 +135,9 @@ short and focused specs for asserting return values, error raising,
 etc.  Maybe some undergrads can be recruited to help with these.
 Armando will reach out via CS169 GSIs to see if interest.
 
-## Exercise sequence
+### Exercise sequence
 
-Note: all development below is within the paperkid-wallet directory. It's getting too cumbersome to separate (and synchronize) the steps of the exercise sequence across the different paperkid directories. -mv 
+Note: all development below is within the paperkid-wallet directory. It's getting too cumbersome to separate (and synchronize) the steps of the exercise sequence across the different paperkid directories. -mv
 
 (todo) Fix Wallet class so that it raises error only when constructor gets
 negative value. Withdrawing too much should return falsy and capture the error somehow.
@@ -127,12 +145,12 @@ negative value. Withdrawing too much should return falsy and capture the error s
 (done) Part 1:  develop [tests for Wallet (DONE - mv)](https://github.com/ace-lab/pl-ucb-rspec-fpp-research/blob/main/questions/pl-faded-parsons-examples/paperkid/paperkid-wallet/app/spec/funcs_spec.rb)
 
 - test happy path of leaf function `withdraw`
-- test sad path - error string gets set, and balance does not change 
-   - 2 specs that can share a before-block
+- test sad path - error string gets set, and balance does not change
+  - 2 specs that can share a before-block
 - test for raising error in constructor
 
 
-```ruby
+``` ruby
 class Wallet
   attr_reader :cash
   attr_reader :error
@@ -142,7 +160,7 @@ class Wallet
     @cash = amount
   end
   def withdraw(amount)
-    if amount > @cash or amount < 0 
+    if amount > @cash or amount < 0
       @error = 'invalid request'
       return nil
     end
@@ -168,7 +186,7 @@ New: `@error` string instance variable to test object state after delivery attem
 New: instance method called for successful deliveries, which clears error string if set.
 New: `amount` parameter for Customer#attempt_delivery replaced with `@rate` instance variable
 
-```ruby
+``` ruby
 class Customer
   attr_reader :error
   def initialize(wallet, rate)
@@ -188,4 +206,3 @@ class Customer
   end
 end
 ```
-
