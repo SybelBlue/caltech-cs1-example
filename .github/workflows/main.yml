@@ -30,6 +30,9 @@ jobs:
         VALIDATE_ALL_CODEBASE: false # Validate only changed files. (TODO: Remove after remediations.)
         DEFAULT_BRANCH: master
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # exclude auto-generated question.html files in the examples directory
+        # to suppress errors about pl-markdown body characters.
+        FILTER_REGEX_EXCLUDE: '.*questions\/pl-faded-parsons-examples\/.*\/.*question.html'
 
     - name: Validate-Info-JSONs
       run: bash validation_workflow/validate_changed_files
