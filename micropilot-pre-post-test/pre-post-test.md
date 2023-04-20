@@ -28,3 +28,21 @@ Write a suite of rspec unit tests to verify the desired behavior of the `Book.ne
 ## System Under Test 2
 This may be too much to ask during pre/post
 
+```ruby
+class lucky_number_game
+
+    def initialize()
+    end
+
+    def test_my_luck
+        return generate() == 42
+    end
+
+    def generate    
+        rand(1000)
+    end
+end
+```
+
+## Write rspec unit tests for the `test_my_luck` method
+Write at least one unit test.
