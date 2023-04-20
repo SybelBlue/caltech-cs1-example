@@ -20,7 +20,7 @@ describe 'LuckyNumber' do
         expect(@lucky_number.feeling_lucky).to be true
     end
 
-    it 'can will lose on not 42' do
+    it 'will lose on not 42' do
         @lucky_number = Lucky.new(42)
         allow(@lucky_number).to receive(:generate).and_return(32)
         expect(@lucky_number.feeling_lucky).to be false
