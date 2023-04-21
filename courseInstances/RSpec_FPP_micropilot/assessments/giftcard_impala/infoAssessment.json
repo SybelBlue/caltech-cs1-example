@@ -3,7 +3,7 @@
     "type": "Homework",
     "title": "Giftcard Impala",
     "number": "",
-    "set": "Micropilot",
+    "set": "GC Impala",
     "allowAccess": [
         {
             "startDate": "2000-01-01T12:00:00"
@@ -26,11 +26,11 @@
             "title": "Giftcard Impala",
             "comment": "",
             "questions": [
-                {"id": "giftcard_impala/giftcard1", "points": 0, "advanceScorePerc": 100},
-                {"id": "giftcard_impala/giftcard2", "points": 0, "advanceScorePerc": 100},
-                {"id": "giftcard_impala/giftcard3", "points": 0, "advanceScorePerc": 100},
-                {"id": "giftcard_impala/giftcard4", "points": 0, "advanceScorePerc": 100},
-                {"id": "giftcard_impala/giftcard5", "points": 0, "advanceScorePerc": 100}
+                {"id": "giftcard_impala/giftcard1", "points": 1, "advanceScorePerc": 100},
+                {"id": "giftcard_impala/giftcard2", "points": 1, "advanceScorePerc": 100},
+                {"id": "giftcard_impala/giftcard3", "points": 1, "advanceScorePerc": 100},
+                {"id": "giftcard_impala/giftcard4", "points": 1, "advanceScorePerc": 100},
+                {"id": "giftcard_impala/giftcard5", "points": 1, "advanceScorePerc": 100}
             ]
         }
     ]
