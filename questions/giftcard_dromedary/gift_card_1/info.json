@@ -6,7 +6,6 @@
     "type": "v3",
     "singleVariant": true,
     "gradingMethod" : "External",
-    "showCorrectAnswer" : false,
     "externalGradingOptions": {
         "enabled": true,
         "image" : "nalsoon/rspec-autograder:dev",
