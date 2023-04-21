@@ -5,7 +5,6 @@
     "tags": [],
     "type": "v3",
     "singleVariant": true,
-    "showCorrectAnswer" : false,
     "gradingMethod" : "External",
     "externalGradingOptions": {
         "enabled": true,
