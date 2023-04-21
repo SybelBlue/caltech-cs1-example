@@ -1,0 +1,26 @@
+{
+    "uuid": "896ca83d-a3d9-4c10-9ac8-ad4dae4cc678",
+    "type": "Homework",
+    "title": "giftcard impala",
+    "number": "",
+    "set": "micropilot",
+    "allowAccess": [
+        {
+            "startDate": "2000-01-01T12:00:00"
+        }    
+    ],
+    "zones": [
+        {
+            "title": "Giftcard Impala",
+            "comment": "",
+            "questions": [
+                {"id": "giftcard_impala/giftcard1", "points": 1, "advanceScorePerc": 100},
+                {"id": "giftcard_impala/giftcard2", "points": 1, "advanceScorePerc": 100},
+                {"id": "giftcard_impala/giftcard3", "points": 1, "advanceScorePerc": 100},
+                {"id": "giftcard_impala/giftcard4", "points": 1, "advanceScorePerc": 100},
+                {"id": "giftcard_impala/giftcard5", "points": 1, "advanceScorePerc": 100}
+            ]
+        }
+    ]
+}
+

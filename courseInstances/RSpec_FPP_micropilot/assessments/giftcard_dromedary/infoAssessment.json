@@ -1,0 +1,25 @@
+{
+    "uuid": "e8705d1e-60a1-4d83-b728-d147d08da2a4",
+    "type": "Homework",
+    "title": "giftcard dromedary",
+    "number": "",
+    "set": "micropilot",
+    "allowAccess": [
+        {
+            "startDate": "2000-01-01T12:00:00"
+        }    
+    ],
+    "zones": [
+        {
+            "title": "Giftcard Dromedary",
+            "comment": "",
+            "questions": [
+                {"id": "giftcard_dromedary/gift_card_1", "points": 1, "advanceScorePerc": 100},
+                {"id": "giftcard_dromedary/gift_card_2", "points": 1, "advanceScorePerc": 100},
+                {"id": "giftcard_dromedary/gift_card_3", "points": 1, "advanceScorePerc": 100},
+                {"id": "giftcard_dromedary/gift_card_4", "points": 1, "advanceScorePerc": 100},
+                {"id": "giftcard_dromedary/gift_card_5", "points": 1, "advanceScorePerc": 100}
+            ]
+        }
+    ]
+}
