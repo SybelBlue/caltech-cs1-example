@@ -15,7 +15,7 @@ def score_cases(student_fn, ref_fn, *cases):
         ref_val = ref_fn(*case)
         if user_val == ref_val:
             correct += 1
-    
+
     # set_score must be in range 0.0 to 1.0
     if cases:
         Feedback.set_score(correct / len(cases))
@@ -32,7 +32,7 @@ class Test(PLTestCase):
             ([1, 2, 3, 4], [4, 3])
         )
 
-    
+
     @points(8)
     @name("advanced cases")
     def test_1(self):
