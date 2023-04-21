@@ -1,0 +1,16 @@
+{
+    "uuid": "7b699905-9a72-42fe-9596-3177d82df705",
+    "title": "GiftCard 2",
+    "topic": "",
+    "tags": [],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod" : "External",
+    "showCorrectAnswer" : false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image" : "nalsoon/rspec-autograder",
+        "entrypoint": "/grader/run.py",
+        "timeout" : 60
+    }
+}

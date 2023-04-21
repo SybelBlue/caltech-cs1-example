@@ -9,6 +9,15 @@ $$\bf M =
 $$"""
 
 
-def det(a, b, c, d): #0given
-    """Calculates the determinant of a 2x2 matrix"""
-    return ?a * d - b * c?
+def det(a, b, c, d)
+  ?a * d - b * c?
+end
+
+## test ##
+describe "det" do
+  it "returns 0 on non-invertible matrix" do
+    expect(det(1, 1, 0, 0)).to eq(0)
+  end
+end
+## test ##
+

@@ -1,7 +1,0 @@
-*** /dev/null
---- /dev/null
-***************
-*** 4
--     if @balance < 0
---- 4 -----
-+     if @balance >= 0

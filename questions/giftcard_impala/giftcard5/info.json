@@ -1,0 +1,15 @@
+{
+    "uuid": "814f3037-3434-4ebb-85a3-c8bc1993c34a",
+    "title": "Customer 2",
+    "topic": "",
+    "tags": [],
+    "type": "v3",
+    "singleVariant": true,
+    "gradingMethod": "External",
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "nalsoon/rspec-autograder",
+        "entrypoint": "/grader/run.py",
+        "timeout": 30
+    }
+}
