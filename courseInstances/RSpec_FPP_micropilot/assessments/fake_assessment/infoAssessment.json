@@ -14,13 +14,13 @@
             "title": "Pre test",
             "comment": "",
             "questions": [
-                {"id": "lucky_pre", "points" : 0}
+                {"id": "lucky_pre", "manualPoints" : 1}
             ]
         }, {
             "title": "Post test",
             "comment": "",
             "questions": [
-                {"id": "lucky_post", "points" : 0}
+                {"id": "lucky_post", "manualPoints" : 1}
             ]
         }, {
             "title": "Giftcard Dromedary",
