@@ -1,4 +1,0 @@
-[submodule "elements/pl-faded-parsons"]
-	path = elements/pl-faded-parsons
-	url = https://github.com/ace-lab/faded-parsons-element.git
-	branch = main
