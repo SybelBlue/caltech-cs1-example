@@ -17,6 +17,12 @@
                 {"id": "lucky_pre", "points" : 0}
             ]
         }, {
+            "title": "Post test",
+            "comment": "",
+            "questions": [
+                {"id": "lucky_post", "points" : 0}
+            ]
+        }, {
             "title": "Giftcard Dromedary",
             "comment": "",
             "questions": [
@@ -25,12 +31,6 @@
                 {"id": "giftcard_dromedary/gift_card_3", "points": 1, "advanceScorePerc": 100},
                 {"id": "giftcard_dromedary/gift_card_4", "points": 1, "advanceScorePerc": 100},
                 {"id": "giftcard_dromedary/gift_card_5", "points": 1, "advanceScorePerc": 100}
-            ]
-        }, {
-            "title": "Post test",
-            "comment": "",
-            "questions": [
-                {"id": "lucky_post", "points" : 0}
             ]
         }
     ]

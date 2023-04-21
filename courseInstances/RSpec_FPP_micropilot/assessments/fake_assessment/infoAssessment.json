@@ -1,5 +1,5 @@
 {
-    "uuid": "e8705d1e-60a1-4d83-b728-d147d08da2a4",
+    "uuid": "eca9572d-8cf3-4c20-9b15-5d3671b915f1",
     "type": "Homework",
     "title": "DevTest Assessment",
     "number": "",
@@ -17,18 +17,18 @@
                 {"id": "lucky_pre", "points" : 0}
             ]
         }, {
+            "title": "Post test",
+            "comment": "",
+            "questions": [
+                {"id": "lucky_post", "points" : 0}
+            ]
+        }, {
             "title": "Giftcard Dromedary",
             "comment": "",
             "questions": [
                 {"id": "giftcard_dromedary/gift_card_1", "points": 1, "advanceScorePerc": 100},
                 {"id": "giftcard_impala/giftcard1", "points" : 1, "advanceScorePerc" : 100},
-                {"id": "giftcard_dromedary/gift_card_2", "points": 1, "advanceScorePerc": 100}
-            ]
-        }, {
-            "title": "Post test",
-            "comment": "",
-            "questions": [
-                {"id": "lucky_post", "points" : 0}
+                {"id": "giftcard_dromedary/gift_card_2", "points": 1, "advanceScorePerc" : 100}
             ]
         }
     ]
