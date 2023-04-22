@@ -76,11 +76,11 @@ The `before` block is often used to set up state that is required for each test.
 
 ```ruby
 describe "Calculator" do
-  before do
+  before(:each) do
     @calculator = Calculator.new
   end
 
-  after do
+  after(:each) do
     @calculator.clear_history
   end
 
