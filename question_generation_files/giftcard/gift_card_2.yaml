@@ -1,30 +1,28 @@
-submit_to: spec/gift_card_spec.rb
+submit_to: spec/giftcard_spec.rb
 prompt: |
-  Your app manages online gift cards for a soon-to-be-major e-tailer.
-  Customers can use the app to place orders using their card
-  balance. <br /><br />
-
-  We have classes that model the GiftCard and the Customer.  First you
-  will write tests for the GiftCard class, to verify that: <br /><br />
-
-  * a GiftCard when first created has a non-negative cash balance <br />
-  * a withdrawal when there is enough cash returns success, and changes
-  the card balance <br />
-  * a withdrawal when there is not enough cash returns failure, provides 
-  an error message explaining the failure, and does not change the card balance. <br /><br />
+  <markdown>
   
-  The provided code before the submission box is semantically equivalent to the 
+    
+  In this question, construct tests that verify:
+  * a withdrawal when there is enough balance returns success
+  * a withdrawal when there is enough balance changes the card balance
+  * a withdrawal when there is enough balance does not produce an error message
+    
+  The provided code that goes before yours is semantically equivalent to the 
   code you wrote previously, but take note that we have chosen to separate it 
-  logically by putting it into a `describe` block.
+  logically by putting it into a `describe` block.  
+
+  ---
+  </markdown>
   
 solution: 
   pre: |
     describe GiftCard do
       describe 'creating' do
-        it 'fails with negative balance' do
+        it 'errors with negative balance' do
           expect { GiftCard.new(-1) }.to raise_error(ArgumentError)
         end
-        it 'succeeds with positive balance' do
+        it 'successfully assigns a positive balance' do
           gift_card = GiftCard.new(20)
           expect(gift_card.balance).to eq(20)
         end

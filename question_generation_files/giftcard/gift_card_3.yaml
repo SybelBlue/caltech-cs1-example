@@ -1,32 +1,26 @@
-submit_to: spec/gift_card_spec.rb
+submit_to: spec/giftcard_spec.rb
 prompt: |
-  Your app manages online gift cards for a soon-to-be-major e-tailer.
-  Customers can use the app to place orders using their card
-  balance. <br /><br />
-
-  We have classes that model the GiftCard and the Customer.  You have now
-  written tests for the GiftCard class to verify that: <br /><br />
-
-  * a GiftCard when first created has a non-negative cash balance <br />
-  * a withdrawal when there is enough cash returns success, and changes
-  the card balance <br />
-  * a withdrawal when there is not enough cash returns failure, provides 
-  an error message explaining the failure, and does not change the card balance. <br /><br />
-  
-  Now, we would like to DRY out our code by using the `before(:each)` block. <br />
-
+  <markdown>
+  Now, we would like to DRY out our code by using the `before(:each)` block.
   Arrange the common lines of the previous tests into the `before` block with the
-  unique lines in their own `it` blocks. The SUT is hidden for this rspec refactoring
-  exercise.
-  
+  unique lines in their own `it` blocks. The verification criteria from the 
+  previous question is repeated here for your convenience.  
+    
+  In this question, construct tests that verify:
+  * a withdrawal when there is enough cash returns success
+  * a withdrawal when there is enough cash changes the card balance
+  * a withdrawal when there is enough cash does not produce an error message
+  --- 
+  </markdown>
+
 solution:
   pre: |
     describe GiftCard do
       describe 'creating' do
-        it 'fails with negative balance' do
+        it 'errors with negative balance' do
           expect { GiftCard.new(-1) }.to raise_error(ArgumentError)
         end
-        it 'succeeds with positive balance' do
+        it 'successfully assigns a positive balance' do
           gift_card = GiftCard.new(20)
           expect(gift_card.balance).to eq(20)
         end
@@ -50,21 +44,21 @@ solution:
       end
     end
 mutations:
-  var_1:
+  wrong_balance_check:
     files:
       giftcard.rb: |
         11c11
         <     if @balance >= amount
         ---
         >     if @balance < amount
-  var_2:
+  wrong_balance_change:
     files:
       giftcard.rb: |
         12c12
         <       @balance -= amount
         ---
         >       @balance += amount
-  var_3:
+  wrong_erroring:
     files:
       giftcard.rb: |
         12c12
