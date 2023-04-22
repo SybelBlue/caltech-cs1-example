@@ -1,9 +1,6 @@
+# Basic RSpec Syntax
 
-
-Thanks to Chat-GPT for help assembling this summary...
-
-
-## Basic RSpec Syntax
+## Grouping
 
 RSpec tests are written using the `describe` and `it` methods.
 
@@ -11,12 +8,19 @@ RSpec tests are written using the `describe` and `it` methods.
 - `it` is used to define a specific test case.
 
 ```ruby
-describe "MyClass" do
-  it "should be an instance of MyClass" do
-    expect(MyClass.new).to be_an_instance_of(MyClass)
+describe MyClass do
+  describe "instantiates" do
+    it "to an instance of MyClass" do
+      expect(MyClass.new).to be_an_instance_of(MyClass)
+    end
+    
+    it "without errors" do
+      expect {MyClass.new}.to_not raise_error
+    end
   end
 end
 ```
+
 
 ## Expectations
 
@@ -32,12 +36,16 @@ Some commonly used matchers include:
 - `eq` - check if two values are equal
 - `be` - check if two objects are the same object
 - `be_within` - check if a value is within a certain range
+- `be_truthy` / `be_falsy` - check if a value is truthy/falsy through duck typing
+- `be_empty` - check if a collection (or string) has no elements
 - `raise_error` - check if a certain error is raised
 
 ```ruby
 expect(4).to eq(4)
 expect(obj1).to be(obj2)
-expect(3.14).to be_within(0.1).of(3.0)
+expect(3.14).to be_within(0.15).of(3.0)
+expect(4).to be_truthy
+expect("").to be_empty
 expect { raise "Error!" }.to raise_error("Error!")
 ```
 
@@ -47,7 +55,41 @@ expect { raise "Error!" }.to raise_error("Error!")
 Mocks and stubs facilitate testing methods in isolation. They are used to simulate certain behavior or values during testing.
 
 ```ruby
-allow(obj).to receive(:method).and_return(value)
-expect(obj).to receive(:method).with(args).and_return(value)
+@obj = MyClass.new
+allow(@obj).to receive(:method).and_return(value)
+expect(@obj).to receive(:method).with(args).and_return(value)
 ```
 
+## Doubles
+
+Doubles allow you to test code without depending on the implementation of another class.
+
+```ruby
+@my_double = double('myclass')
+allow(@my_double).to receive(:method).and_return(return_value)
+```
+
+## `before` and `after` blocks
+`before` and `after` blocks are before or after (respectively) running each test.
+
+The `before` block is often used to set up state that is required for each test. The `after` block is often used to clean up state that was created during the test.
+
+```ruby
+describe "Calculator" do
+  before do
+    @calculator = Calculator.new
+  end
+
+  after do
+    @calculator.clear_history
+  end
+
+  it "adds two numbers" do
+    expect(@calculator.add(2, 3)).to eq(5)
+  end
+
+  it "multiplies two numbers" do
+    expect(@calculator.multiply(2, 3)).to eq(6)
+  end
+end
+```
