@@ -12,6 +12,7 @@ class GiftCard
       @balance += amount
     else
       @error = "Insufficient balance"
+      return nil
     end
   end
 end

@@ -1,21 +1,24 @@
 <pl-question-panel>
-    Your app manages online gift cards for a soon-to-be-major e-tailer.
-    Customers can use the app to place orders using their card
-    balance. <br /><br />
-    
-    We have classes that model the GiftCard and the Customer.  First you
-    will write tests for the GiftCard class, to verify that: <br /><br />
-    
-    * a GiftCard when first created has a non-negative cash balance <br />
-    * a withdrawal when there is enough cash returns success, and changes 
-    the card balance <br />
-    * a withdrawal when there is not enough cash returns failure, provides 
-    an error message explaining the failure, and does not change the card balance. <br />
+<markdown>
+Your app manages online gift cards for a soon-to-be-major e-tailer.
+Customers can use the app to place orders using their card
+balance.  
+  
+We have classes that model the GiftCard and the Customer.  Your task
+is to write a test suite for them.
+  
+In this question, construct tests that verify:
+* a GiftCard when first created has a non-negative cash balance
+* a GiftCard when first created assigns itself a balance
 
+For autograder feedback (and to recieve points to progress), make sure your tests are named as follows:
+```ruby
+'GiftCard fails to instantiate with negative balance'
+'GiftCard successfully assigns a positive balance on instantiation'
+```
 
-    Name your tests as follows to recieve autograder feedback:
-    <pl-code language="rb">'GiftCard fails with negative balance'
-'GiftCard succeeds with positive balance'</pl-code>
+---
+</markdown>
 </pl-question-panel>
 
 

@@ -8,10 +8,11 @@ class GiftCard
     @error = nil
   end
   def withdraw(amount)
-    if @balance >= amount
-      @balance += amount
+    if @balance < amount
+      @balance -= amount
     else
       @error = "Insufficient balance"
+      return nil
     end
   end
 end

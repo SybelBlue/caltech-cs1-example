@@ -6,7 +6,7 @@ class Customer
   end
   def pay(amount)
     if gift_card.withdraw(amount)
-      self.dont_call_notify("payment successful")
+      nil
     else
       self.notify("purchase cannot be completed")
     end

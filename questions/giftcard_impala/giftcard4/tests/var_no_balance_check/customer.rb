@@ -5,10 +5,10 @@ class Customer
     @name = name
   end
   def pay(amount)
-    if gift_card.withdraw(amount)
+    if 1
       self.notify("payment successful")
     else
-      self.dont_call_notify("purchase cannot be completed")
+      self.notify("purchase cannot be completed")
     end
   end
 end
