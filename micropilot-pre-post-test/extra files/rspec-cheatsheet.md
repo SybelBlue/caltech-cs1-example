@@ -3,7 +3,6 @@
 ## Grouping
 
 RSpec tests are written using the `describe` and `it` methods.
-
 - `describe` is used to group a set of tests together and define a subject.
 - `it` is used to define a specific test case.
 
@@ -52,7 +51,7 @@ expect { raise "Error!" }.to raise_error("Error!")
 
 ## Mocks and Stubs
 
-Mocks and stubs facilitate testing methods in isolation. They are used to simulate certain behavior or values during testing.
+Mocks and stubs facilitate testing without depending on the implementation of methods that we aren't testing. They are used to simulate behavior or values during testing.
 
 ```ruby
 @obj = MyClass.new
@@ -70,9 +69,10 @@ allow(@my_double).to receive(:method).and_return(return_value)
 ```
 
 ## `before` and `after` blocks
-`before` and `after` blocks are before or after (respectively) running each test.
+`before` and `after` blocks are executed before and after (respectively) running tests.
 
-The `before` block is often used to set up state that is required for each test. The `after` block is often used to clean up state that was created during the test.
+- `before` blocks are often used to set up state that is required for each test
+- `after` blocks are often used to clean up state that was created during each test.
 
 ```ruby
 describe "Calculator" do
