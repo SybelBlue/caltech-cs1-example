@@ -38,7 +38,7 @@ Some commonly used matchers include:
 - `be_truthy` / `be_falsy` - check if a value is truthy/falsy through duck typing
 - `be_empty` - check if a collection (or string) has no elements
 - `raise_error` - check if a certain error is raised
-- `recieve` - check if an object received a method call
+- `receive` - check if an object received a method call
 
 ```ruby
 expect(4).to eq(4)
