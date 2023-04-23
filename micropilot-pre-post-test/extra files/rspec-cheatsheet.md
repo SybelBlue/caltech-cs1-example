@@ -38,6 +38,7 @@ Some commonly used matchers include:
 - `be_truthy` / `be_falsy` - check if a value is truthy/falsy through duck typing
 - `be_empty` - check if a collection (or string) has no elements
 - `raise_error` - check if a certain error is raised
+- `recieve` - check if an object received a method call
 
 ```ruby
 expect(4).to eq(4)
@@ -46,17 +47,17 @@ expect(3.14).to be_within(0.15).of(3.0)
 expect(4).to be_truthy
 expect("").to be_empty
 expect { raise "Error!" }.to raise_error("Error!")
+expect(obj1).to receive(:method).with(arg1, arg2).and_return(value)
 ```
 
 
-## Mocks and Stubs
+## Stubs
 
-Mocks and stubs facilitate testing without depending on the implementation of methods that we aren't testing. They are used to simulate behavior or values during testing.
+Stubs facilitate testing without depending on the implementation of methods that we aren't testing. They are used to simulate behavior or values during testing.
 
 ```ruby
 @obj = MyClass.new
 allow(@obj).to receive(:method).and_return(value)
-expect(@obj).to receive(:method).with(args).and_return(value)
 ```
 
 ## Doubles
