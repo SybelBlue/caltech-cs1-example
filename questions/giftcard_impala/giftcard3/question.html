@@ -5,6 +5,28 @@ Arrange the common lines of the previous tests into the `before` block with the
 unique lines in their own `it` blocks. The verification criteria from the 
 previous question is repeated here for your convenience.  
   
+Below is the implementation of `GiftCard`
+```ruby
+class GiftCard
+  attr_reader :balance, :error
+  def initialize(balance)
+    if balance < 0
+      raise ArgumentError.new("New gift card cannot have negative balance")
+    end
+    @balance = balance
+    @error = nil
+  end
+  def withdraw(amount)
+    if @balance >= amount
+      @balance -= amount
+    else
+      @error = "Insufficient balance"
+      return nil
+    end
+  end
+end
+```  
+  
 In this question, construct tests that verify:
 * a withdrawal when there is enough cash returns success
 * a withdrawal when there is enough cash changes the card balance

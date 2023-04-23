@@ -7,6 +7,28 @@ balance.
   
 We have classes that model the GiftCard and the Customer.  Your task
 is to write a test suite for them.
+
+Below is the implementation of `GiftCard`
+```ruby
+class GiftCard
+  attr_reader :balance, :error
+  def initialize(balance)
+    if balance < 0
+      raise ArgumentError.new("New gift card cannot have negative balance")
+    end
+    @balance = balance
+    @error = nil
+  end
+  def withdraw(amount)
+    if @balance >= amount
+      @balance -= amount
+    else
+      @error = "Insufficient balance"
+      return nil
+    end
+  end
+end
+```
   
 In this question, construct tests that verify:
 * a GiftCard when first created has a non-negative cash balance
