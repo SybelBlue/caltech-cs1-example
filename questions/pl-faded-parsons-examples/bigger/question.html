@@ -1,0 +1,21 @@
+<!-- AUTO-GENERATED FILE -->
+<pl-question-panel>
+This is an example of a larger project. <br />
+<br />
+There is a number of files that need to be populated. <br />
+<br />
+The current approach is to specify each of those files in the source
+</pl-question-panel>
+
+<!-- see README for where the various parts of question live -->
+<pl-faded-parsons>
+  class GiftCard #0given
+    attr_reader :balance, :error #1given
+    def initialize(balance) #1given
+      if balance !BLANK
+        raise ArgumentError.new("New gift card cannot have negative balance")
+      end
+      @balance = balance
+      @error = nil
+    end #1given
+</pl-faded-parsons>
