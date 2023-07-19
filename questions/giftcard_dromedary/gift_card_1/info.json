@@ -8,7 +8,7 @@
     "gradingMethod" : "External",
     "externalGradingOptions": {
         "enabled": true,
-        "image" : "nalsoon/rspec-autograder:dev",
+        "image" : "saasbook/pl-rspec-autograder",
         "entrypoint": "/grader/run.py",
         "timeout" : 60
     }
