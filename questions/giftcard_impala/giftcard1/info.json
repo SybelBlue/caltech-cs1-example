@@ -2,7 +2,7 @@
     "uuid": "1a829a51-0aa3-402f-99e3-7da043681ff5",
     "title": "GiftCard 1",
     "topic": "RSpec",
-    "tags": [],
+    "tags": ["RSpec"],
     "type": "v3",
     "singleVariant": true,
     "gradingMethod": "External",

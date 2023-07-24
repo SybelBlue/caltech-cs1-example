@@ -2,7 +2,7 @@
     "uuid": "33c47713-f116-45b6-b4ce-1541dbf86e97",
     "title": "Customer 1",
     "topic": "RSpec",
-    "tags": [],
+    "tags": ["RSpec"],
     "type": "v3",
     "singleVariant": true,
     "gradingMethod": "External",
