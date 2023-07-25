@@ -1,3 +1,11 @@
+# according to the canonical SUS paper:
+# To calculate the SUS score, first sum the score contributions from
+# each item. Each item's score contribution will range from 0 to 4. For
+# items 1,3,5,7,and 9 the score contribution is the scale position minus
+# 1. For items 2,4,6,8 and 10, the contribution is 5 minus the scale
+# position. Multiply the sum of the scores by 2.5 to obtain the overall
+# value of SU.  SUS scores have a range of 0 to 100.
+
 def generate(data): 
     data['params']['questions'] = [
         {'q': 'I think that I would like to use this system frequently.', 'n': '1'},

@@ -1,7 +1,7 @@
+require_relative '../lib/gift_card.rb'
+require_relative '../lib/customer.rb'
 describe Customer do
-  ## STATIC
   describe 'trying to buy' do
-    ## END STATIC
     before(:each) do  ## SC
       @loaded_gift_card = double('gift_card')
       @customer = Customer.new('Student', @loaded_gift_card)
@@ -13,7 +13,7 @@ describe Customer do
     end  ## SC
     it 'fails if balance does not cover payment' do
       allow(@loaded_gift_card).to receive(:withdraw).and_return(nil)
-      expect(@customer).to receive(:notify).with(? "purchase cannot be completed" ?)  ## SC
+      expect(@customer).to receive(:notify).with( "purchase cannot be completed")  ## SC
       @customer.pay(10)  ## SC
     end
   end 

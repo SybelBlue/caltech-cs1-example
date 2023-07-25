@@ -1,28 +1,50 @@
-# Instructor info:
+# Instructor info: Faded Parsons sequence for Gift Card Spec 
 
-This nominally 2-part assigmnet starts by developing a handful of unit
+This multipart exercise starts by having the student develop simple unit
 tests for pure leaf functions (constructor & public method of a very
 simple GiftCard class), then proceeds to introduce test doubles to
 develop unit tests for a Customer class that depends on the GiftCard
 class to make a purchase.
 
-Each of the 2 main parts is to be presented to the student in _phases_
-(or stages; we need a good word for this).  In stage N, they develop a
-very specific unit test (or maybe 2, if they're simple) in a
-vertically-laid-out FPP screen layout.  In stage
-N+1, the work they have completed in stage N becomes part of the
-static code displayed on the screen, and they develop new code in a
+`lib/` and `spec/` contain the complete, runnable code and tests
+(i.e. effectively a reference solution). You   can verify the tests run
+by doing `rspec -fd spec` in their common parent directory.  
+
+When the question is presented, it's done in 5 parts:
+
+1. Write tests for the `GiftCard` constructor that verify successful
+creation (nonnegative balance) and failed creation (negative
+balance).  **Learning objective (LO):** write simple specs that test a
+single behavior each.
+
+2. Add tests that verify a successful withdrawal returns success,
+changes the card balance, and does not produce an error message.
+**LO:** understand why it's necessary to use braces to create a
+callable for `it` for a test that would otherwise raise an exception.
+
+3. DRY out by grouping common preconditions for the existing specs.
+**LO:** use a `before` block to group common precondition setup for
+multiple specs.
+
+4. Test a method `Customer#pay` that depends on `GiftCard#withdraw`,
+but without relying on the implementation of the latter. **LO:** Use a
+method double to force a return value from a helper method in a test,
+rather than calling the actual implementation of the helper method.
+
+5. Finish the sad path for `Customer#pay`, and again group common
+preconditions using `before` blocks.
+
+The `infoAssessment.json` sequences these parts in fixed order and
+requires the student to get 100% on each part before going on to the
+next.  At each step, work completed in previous steps becomes part of the
+static code displayed on the screen, and the student develops new code in a
 vertically-laid-out FPP panel that is correctly inlined/interleaved
 with that static code.
 
-This assignment is an "on ramp" to CHIPS 8.5, which has other problems
-of its own that need addressing but jumps right into writing tests.  A
-research question is whether this on-ramp actually helps students.
-
 ## Reference SUT and solution - will not be part of the student-visible scaffolding:
 
-* [system under test](questions/giftcard-example/gift_card.rb)
-* [reference test suite](questions/giftcard-example/gift_card_spec.rb)
+* system under test: [GiftCard](lib/gift_card.rb) and [Customer](lib/customer.rb)
+* reference specs: [GiftCard](spec/gift_card_spec.rb) and [Customer](spec/customer_spec.rb)
 
 I'm using names like `gift_card_spec.1.rb`, `gift_card_spec.2.rb`, etc
 to show what i hope the UX looks like in each phase.  In those files,

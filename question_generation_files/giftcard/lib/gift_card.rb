@@ -1,7 +1,7 @@
 class GiftCard
   attr_reader :balance, :error
   def initialize(balance)
-    if @balance < 0
+    if balance < 0
       raise ArgumentError.new("New gift card cannot have negative balance")
     end
     @balance = balance
@@ -12,6 +12,7 @@ class GiftCard
       @balance -= amount
     else
       @error = "Insufficient balance"
+      return nil
     end
   end
 end
