@@ -14,7 +14,15 @@
             "title": "Pre test",
             "comment": "",
             "questions": [
+                {"id": "survey_pre", "points": 1, "manualPoints" : 1},
                 {"id": "lucky_pre", "points": 1, "manualPoints" : 1}
+            ]
+        }, {
+            "title": "Post test",
+            "comment": "",
+            "questions": [
+                {"id": "lucky_post" , "points": 1, "manualPoints" : 1},
+                {"id": "survey_post", "points": 1, "manualPoints" : 1}
             ]
         }, {
             "title": "Giftcard Impala",
