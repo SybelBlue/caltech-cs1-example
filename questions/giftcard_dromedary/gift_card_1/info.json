@@ -4,6 +4,7 @@
     "topic": "RSpec",
     "tags": ["RSpec"],
     "type": "v3",
+    "showCorrectAnswer" : false,
     "singleVariant": true,
     "gradingMethod" : "External",
     "externalGradingOptions": {
