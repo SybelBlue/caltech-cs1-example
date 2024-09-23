@@ -1,0 +1,9 @@
+{
+    "uuid": "e2d4ee35-e38b-4963-a285-f39c1f584ae0",
+    "longName": "CS1",
+    "allowAccess": [
+        {
+            "startDate": "2000-01-01T12:00:00"
+        }
+    ]
+}

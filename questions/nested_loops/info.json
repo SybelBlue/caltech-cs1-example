@@ -1,0 +1,19 @@
+{
+    "uuid": "27a6cf49-fe31-4f3b-b13c-1234ed5b98be",
+    "title": "Nested Loops",
+    "topic": "",
+    "tags": [
+        "berkeley",
+        "fp"
+    ],
+    "type": "v3",
+    "gradingMethod": "External",
+    "showCorrectAnswer": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "entrypoint": "/python_autograder/run.sh",
+        "serverFilesCourse": ["pl_stdout_test.py"],
+        "timeout": 5
+    }
+}

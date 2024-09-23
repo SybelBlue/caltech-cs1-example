@@ -1,0 +1,42 @@
+<!-- AUTO-GENERATED FILE -->
+<pl-question-panel>
+<markdown>
+## 2. Nested Loops
+
+### Worked Example
+> Print all pairs of numbers $(x, y)$ where $x \leq 10$ and $y \leq 20$.
+
+``` python
+for i in range(11):      # Why did we use 11 insteead of 10?
+  for j in range(21):    # Could we use x instead of j in this line?
+      print((i, j))      # Why did we use the extra parentheses?
+```
+
+### Faded Parsons Problem
+> Print all triples of numbers $(x, y, z)$ where $x \leq 10$, $y \leq 20$, and $z \leq 30$.
+</markdown>
+</pl-question-panel>
+
+<!-- see README for where the various parts of question live -->
+<pl-faded-parsons answers-name="introduce-self" format="no-code" language="py">
+  for z in range(!BLANK):
+    for !BLANK in range(21):
+      for baz in range(11):
+        print(!BLANK)
+</pl-faded-parsons>
+
+<pl-question-panel>
+<markdown>
+### Full Problem
+> Print all triples of numbers $(x, y, z)$ where $x \lt y \lt z \lt 20$. Order doesn't matter.
+</markdown>
+</pl-question-panel>
+
+<pl-file-editor
+  file-name="all_increasing_triples.py"
+  ace-mode="ace/mode/python"
+  ace-theme="ace/theme/onedark"
+>
+</pl-file-editor>
+
+<pl-file-preview></pl-file-preview>

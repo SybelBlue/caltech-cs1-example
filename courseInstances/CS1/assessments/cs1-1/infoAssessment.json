@@ -1,0 +1,23 @@
+{
+    "uuid": "896ca83d-a3d9-4c10-9ac8-ad4dae4cc678",
+    "type": "Homework",
+    "title": "CS1-1",
+    "number": "",
+    "set": "CS1",
+    "allowAccess": [
+        {
+            "startDate": "2000-01-01T12:00:00"
+        }
+    ],
+    "zones": [
+        {
+            "title": "Examples",
+            "comment": "",
+            "questions": [
+                { "id": "string_concatenation", "points": 1 },
+                { "id": "nested_loops", "points": 4 },
+                { "id": "conditionals", "points": 4 }
+            ]
+        }
+    ]
+}

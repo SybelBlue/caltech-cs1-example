@@ -1,0 +1,54 @@
+<!-- AUTO-GENERATED FILE -->
+<pl-question-panel>
+<markdown>
+## 0. String Concatenation
+
+### Worked Example
+> Print a sentence presenting the price of an `iced_matcha_large` at Red Door.
+
+``` python
+iced_matcha_large = 6.25
+print("Large iced matcha lattes cost " + str(iced_matcha_large) + "dollars at Red Door.")
+```
+
+### Faded Parsons Problem
+> Print an introduction of yourself using `name`, `age`, and `house_or_residence`
+</markdown>
+</pl-question-panel>
+
+<!-- see README for where the various parts of question live -->
+<pl-faded-parsons format="no-code" language="py">
+  name = !BLANK
+  age = !BLANK
+  house_or_residence = !BLANK
+  print("Hi, my name is", !BLANK, "- I am", !BLANK, "and live in", !BLANK)
+</pl-faded-parsons>
+
+<pl-question-panel>
+<markdown>
+### Full Problem
+> Print a sentence detailing the price of **a few Red Door items and the total amount for the order**.
+>
+> You should **store the prices in separate variables beforehand**.
+>
+> The total amount should **not be hardcoded**
+>
+> Sample Outputs:
+> ```
+> I pay 6.5 dollars for a 2.5 dollar croissant and a 4 dollar iced coffee!
+> I like to order an avocado toast for 7 dollars with an apple for 1 dollar, bringing my total order to 8 dollars.
+> ```
+</markdown>
+</pl-question-panel>
+
+<pl-file-editor
+  file-name="red_door_order.py"
+  ace-mode="ace/mode/python"
+  ace-theme="ace/theme/monokai"
+>
+# hint: store different foods and their costs here
+# then add them up, and print:
+print('...')
+</pl-file-editor>
+
+<pl-file-preview></pl-file-preview>

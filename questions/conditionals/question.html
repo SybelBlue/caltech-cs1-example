@@ -1,0 +1,32 @@
+<!-- AUTO-GENERATED FILE -->
+<pl-question-panel>
+A movie theater offers tickets at 8 dollars for children under 18, 6 dollars for seniors starting at 65 years of age, and 10 dollars
+for adults. Members also receive 30% off. Find the price of a ticket based on age and member status.
+</pl-question-panel>
+
+<!-- see README for where the various parts of question live -->
+<pl-faded-parsons format="no-code" language="py">
+<pre-text>
+member = ... # True or False
+age = ...    # some number
+</pre-text>
+<code-lines>
+  if !BLANK: #0given
+      if !BLANK: #1given
+          cost = 8 * 0.7  #2given
+      elif !BLANK: #1given
+          cost = 6 * 0.7 #2given
+      else: #1given
+          cost = !BLANK * 0.7 #2given
+  else: #0given
+      if !BLANK: #1given
+          cost = 8 #2given
+      elif !BLANK: #1given
+          cost = 6 #2given
+      else: #1given
+          cost = !BLANK #2given
+</code-lines>
+<post-text>
+print(cost)
+</post-text>
+</pl-faded-parsons>

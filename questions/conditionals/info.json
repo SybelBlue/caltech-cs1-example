@@ -1,0 +1,19 @@
+{
+    "uuid": "829e3f1d-c780-4073-b8d5-bc55f9f0b8b6",
+    "title": "Conditionals",
+    "topic": "",
+    "tags": [
+        "berkeley",
+        "fp"
+    ],
+    "type": "v3",
+    "gradingMethod": "External",
+    "showCorrectAnswer": false,
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "entrypoint": "/python_autograder/run.sh",
+        "serverFilesCourse": ["pl_stdout_test.py"],
+        "timeout": 5
+    }
+}
