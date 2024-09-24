@@ -7,7 +7,6 @@
         "fp"
     ],
     "type": "v3",
-    "showCorrectAnswer": false,
     "gradingMethod": "External",
     "externalGradingOptions": {
         "enabled": true,

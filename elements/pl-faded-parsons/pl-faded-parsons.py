@@ -229,6 +229,7 @@ def render_submission_panel(element, data):
 def render_answer_panel(element, data):
     """Show the instructor's reference solution"""
     path = pl.get_string_attrib(element, 'solution-path', './solution')
+    path = os.path.join(data["options"]["question_path"], path)
 
     if not os.path.exists(path):
         raise FileNotFoundError(f'\n\tCorrect answer not found at `{path}`! \n\tProvide an answer or set "showCorrectAnswer" to false in `./info.json`')
