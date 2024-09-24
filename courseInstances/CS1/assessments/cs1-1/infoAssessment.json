@@ -14,10 +14,10 @@
             "title": "Examples",
             "comment": "",
             "questions": [
-                { "id": "string_concatenation", "points": 1 },
-                { "id": "indexing", "points": 1 },
-                { "id": "nested_loops", "points": 4 },
-                { "id": "conditionals", "points": 4 }
+                { "id": "0_string_concatenation", "points": 1 },
+                { "id": "1_indexing", "points": 1 },
+                { "id": "2_nested_loops", "points": 4 },
+                { "id": "3_conditionals", "points": 4 }
             ]
         }
     ]
