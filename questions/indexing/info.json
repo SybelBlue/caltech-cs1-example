@@ -1,0 +1,19 @@
+{
+    "uuid": "84775ee2-c851-480d-8227-eec2e03d839f",
+    "title": "Indexing",
+    "topic": "",
+    "tags": [
+        "berkeley",
+        "fp"
+    ],
+    "type": "v3",
+    "showCorrectAnswer": false,
+    "gradingMethod": "External",
+    "externalGradingOptions": {
+        "enabled": true,
+        "image": "prairielearn/grader-python",
+        "entrypoint": "/python_autograder/run.sh",
+        "serverFilesCourse": ["pl_stdout_test.py"],
+        "timeout": 5
+    }
+}

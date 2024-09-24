@@ -15,6 +15,7 @@
             "comment": "",
             "questions": [
                 { "id": "string_concatenation", "points": 1 },
+                { "id": "indexing", "points": 1 },
                 { "id": "nested_loops", "points": 4 },
                 { "id": "conditionals", "points": 4 }
             ]
